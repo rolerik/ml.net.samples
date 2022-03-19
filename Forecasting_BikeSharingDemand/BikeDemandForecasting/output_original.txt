@@ -1,0 +1,48 @@
+﻿Evaluation Metrics
+---------------------
+Mean Absolute Error: 726,416
+Root Mean Squared Error: 987,658
+
+Rental Forecast
+---------------------
+Date: 2012-01-01
+Actual Rentals: 2294
+Lower Estimate: 1197,8424
+Forecast: 2334,4434
+Upper Estimate: 3471,0442
+
+Date: 2012-01-02
+Actual Rentals: 1951
+Lower Estimate: 1148,4125
+Forecast: 2360,8608
+Upper Estimate: 3573,309
+
+Date: 2012-01-03
+Actual Rentals: 2236
+Lower Estimate: 1068,5067
+Forecast: 2373,2764
+Upper Estimate: 3678,046
+
+Date: 2012-01-04
+Actual Rentals: 2368
+Lower Estimate: 984,98376
+Forecast: 2382,2546
+Upper Estimate: 3779,5254
+
+Date: 2012-01-05
+Actual Rentals: 3272
+Lower Estimate: 906,73895
+Forecast: 2386,749
+Upper Estimate: 3866,759
+
+Date: 2012-01-06
+Actual Rentals: 4098
+Lower Estimate: 825,9437
+Forecast: 2387,0024
+Upper Estimate: 3948,0613
+
+Date: 2012-01-07
+Actual Rentals: 4521
+Lower Estimate: 743,52264
+Forecast: 2385,3787
+Upper Estimate: 4027,2346

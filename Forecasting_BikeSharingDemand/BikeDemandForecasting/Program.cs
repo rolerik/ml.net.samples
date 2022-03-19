@@ -46,17 +46,21 @@ Forecast(secondYearData, 7, forecastEngine, mlContext);
 void Evaluate(IDataView testData, ITransformer model, MLContext mlContext)
 {
     // Make predictions
-    IDataView predictions = model.Transform(testData);
+    var forecastEngine = forecaster.CreateTimeSeriesEngine<ModelInput, ModelOutput>(mlContext);
+    ModelOutput prediction = forecastEngine.Predict(example: null);
+    //IDataView predictions = model.Transform(testData);
 
     // Actual values
     IEnumerable<float> actual =
         mlContext.Data.CreateEnumerable<ModelInput>(testData, true)
+            .Take(7)
             .Select(observed => observed.TotalRentals);
 
     // Predicted values
-    IEnumerable<float> forecast =
-        mlContext.Data.CreateEnumerable<ModelOutput>(predictions, true)
-            .Select(prediction => prediction.ForecastedRentals[0]);
+    IEnumerable<float> forecast = prediction.ForecastedRentals.AsEnumerable();
+    //IEnumerable<float> forecast =
+    //    mlContext.Data.CreateEnumerable<ModelOutput>(predictions, true)
+    //        .Select(prediction => prediction.ForecastedRentals[0]);
 
     // Calculate error (actual - forecast)
     var metrics = actual.Zip(forecast, (actualValue, forecastValue) => actualValue - forecastValue);
