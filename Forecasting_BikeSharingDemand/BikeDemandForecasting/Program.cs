@@ -1,7 +1,7 @@
 ﻿using Microsoft.ML;
 using Microsoft.ML.Data;
 using Microsoft.ML.Transforms.TimeSeries;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 string rootDir = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../"));
 string dbFilePath = Path.Combine(rootDir, "Data", "DailyDemand.mdf");
